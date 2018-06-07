@@ -1,0 +1,20 @@
+.card {
+  flex-basis: 20%;
+  height: 30rem;
+  display: inline;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+
+  img {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}

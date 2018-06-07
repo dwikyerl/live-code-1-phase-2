@@ -11,6 +11,11 @@ new Vue({
     name: '',
     email: '',
   },
+  create: {
+    getImages() {
+      this.getAllImages();
+    }
+  },
   methods: {
     requestToken(){
       const email = this.email;
@@ -24,7 +29,6 @@ new Vue({
     },
     handleFileUpload(){
       this.file = this.$refs.file.files[0];
-      console.log(this.file);
     },
     submitFile() {
       const formData = new FormData();
@@ -36,7 +40,9 @@ new Vue({
       })
       .then(({data}) => {
         console.log(data);
-      });
+        this.getAllImages();
+      })
+      .catch(err => console.log(err));
     },
     getAllImages() {
       axios.get('http://35.197.135.159/image', {
