@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gim-On</title>
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app">
+    <div class="request-form">
+      <input type="email" v-model="email" name="email" id="email" placeholder="Email">
+      <input type="text" v-model="name" name="name" id="name" placeholder="Name">
+      <button @click="requestToken">Request</button>
+    </div>
+
+    <div class="upload-form">
+      <input type="file" ref="file" @change="handleFileUpload" name="image" id="image">
+      <button @click="submitFile">Upload</button>
+    </div>
+
+    <div class="cards-container">
+      <div class="card">
+        
+      </div>
+    </div>
+  </div>
+
+  <script src='<%= htmlWebpackPlugin.files.chunks.main.entry %>'></script>
+</body>
+
+</html>
